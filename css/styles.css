@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Exo:wght@500&display=swap');
+/* <!-- some basic color theory to think about the website palette wouldn't hurt --> */
+
+.name{
+    text-align: center;
+}
+
+.navbar{
+    text-align: center;
+    font-family: Exo ;
+    font-weight: 400;
+}
+
+body {
+    background-color: lightblue;
+}
+

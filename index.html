@@ -6,11 +6,20 @@ TODO:
     -something like the konami code
     -BLOG POST IDEAS
         - heine borel
+
+    - maybe mathematics should be the homepage as opposed to just a menu to other parts of me
+    - MAKE THE SITE CRAWLABLE
+    - fancy retro cursor could be cool
 -->
 
 <html>
+    <!-- https://htmlhead.dev/#recommended-minimum -->
     <head>
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
         <meta name="author" content="Sebastian Chavarro">
+        <!-- other -->
         <title>Sebastian Chavarro</title>
         <link rel="icon" href="./images/pfp-round.png">
         <link rel="stylesheet" href="./css/styles.css"> <!-- style sheet ! -->
@@ -18,9 +27,8 @@ TODO:
 
     <body>
         
-
         <h1 class="name">
-            <a href="#">Sebastian Chavarro</a> 
+            <a>Sebastian Chavarro</a> 
             <!-- https://stackoverflow.com/questions/2800187/what-is-it-when-a-link-has-a-pound-sign-in-it
                 the pound thing is to link to a different part of the site 
             plan is to have the nav bar always there (maybe shrink back when you scroll
@@ -31,15 +39,17 @@ TODO:
 
         <nav class="navbar">
             <ul>
-                <a href="math.html">Mathematics</a>, 
-                <a href="cs.html">Computer Science</a>, 
-                <a href="books.html">Books</a>, 
-                <a href="vg.html">Video Games</a>, 
-                <a href="tennis.html">Tennis</a>,
-                <a href="music.html">Music</a>
+                <li> <a href="math.html">Mathematics</a> </li>
+                <li> <a href="cs.html">Computer Science</a> </li>
+                <li> <a href="books.html">Books</a> </li>
+                <!--   these will be locked behind konami code              
+                <li> <a href="vg.html">Video Games</a> </li>
+                <li> <a href="tennis.html">Tennis</a> </li>
+                <li> <a href="music.html">Music</a> </li> 
+                -->
             </ul>
         </nav>
 
-        <img src="images/fishe.jpeg">
+        <!-- <img src="images/fishe.jpeg"> -->
     </body>
 </html>

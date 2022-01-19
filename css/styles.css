@@ -1,17 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Exo:wght@500&display=swap');
 /* <!-- some basic color theory to think about the website palette wouldn't hurt --> */
 
-.name{
-    text-align: center;
-}
-
-.navbar{
-    text-align: center;
-    font-family: Exo ;
-    font-weight: 400;
-}
-
-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     background-color: lightblue;
 }
 
+.name{
+    cursor: pointer;    
+}
+
+header {
+    display: flex; /* this makes everything with the pertinent class a FLEXBOX */
+    justify-content: space-between; /* this pushes the left and right items to the furthest edges*/
+    align-items: center;
+    padding: 10px 5%;
+    background-color: black;
+}
+
+.navbar{ 
+    /* text-align: center; */
+    font-family: Exo, sans-serif ;
+    font-weight: 400;
+    font-size: 20px;
+} 
+
+.nav_links{
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block;
+}
+
+
+/* what this do - look good tho */
+html {
+    font-size: calc(1em + 0.5vw);
+} 
+
+/* BOOKS PAGE STYLE PART */

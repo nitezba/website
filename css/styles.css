@@ -8,8 +8,26 @@
     background-color: lightblue;
 }
 
+/* global properties that i want every link to have*/
+a {
+    /* text-decoration: none; */
+    color: rgb(0, 128, 128);
+    border-bottom: 1px solid rgba(0, 128, 128, 0);
+    text-decoration: none;
+    /* transition from hovering to not */
+    transition: all 600ms ease 0s;
+}
+
+/* BETTER TRANSITION https://codepen.io/aaronldunlap/pen/rvFxo */
+a:hover {
+    /* transition from nothing to hovering */
+    transition: all 500ms ease 0s;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
 .name{
-    cursor: pointer;    
+    /* cursor: pointer;     */
 }
 
 header {
@@ -36,11 +54,13 @@ header {
 } 
 /* need this one and not the hover so that the link doesnt look all ugly by default */
 .nav_links li a {
+    
 } 
-.nav_links li a:hover {
+
+/* .nav_links li a:hover {
     transition: all 0.2s ease 0s;
     color: white;
-}
+} */
 
 
 /* what this do - look good tho */

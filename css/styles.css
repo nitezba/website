@@ -17,7 +17,7 @@ header {
     justify-content: space-between; /* this pushes the left and right items to the furthest edges*/
     align-items: center;
     padding: 10px 5%;
-    background-color: black;
+    border-bottom: 2px solid;
 }
 
 .navbar{ 
@@ -32,6 +32,14 @@ header {
 }
 .nav_links li {
     display: inline-block;
+    font-size: 20px;
+} 
+/* need this one and not the hover so that the link doesnt look all ugly by default */
+.nav_links li a {
+} 
+.nav_links li a:hover {
+    transition: all 0.2s ease 0s;
+    color: white;
 }
 
 

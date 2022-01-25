@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Exo:wght@500&display=swap');
 /* <!-- some basic color theory to think about the website palette wouldn't hurt --> */
 
+/* ID'S ARE USED TO IDENTIFY AND STYLE SINGLE ITEMS
+   CLASSES ARE USED TO DO THIS BUT FOR MULTIPLE OBJECTS
+   
+   DONT MAKE EVERYTHING A CLASS DIPSHIT*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,19 +20,27 @@ a {
     border-bottom: 1px solid rgba(0, 128, 128, 0);
     text-decoration: none;
     /* transition from hovering to not */
-    transition: all 600ms ease 0s;
+    transition: all 500ms ease 0s;
 }
 
 /* BETTER TRANSITION https://codepen.io/aaronldunlap/pen/rvFxo */
 a:hover {
     /* transition from nothing to hovering */
-    transition: all 500ms ease 0s;
+    transition: all 400ms ease 0s;
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
 .name{
     /* cursor: pointer;     */
+    font-size: x-large;
+    font-weight: bold;
+}
+
+/* fishe! */
+.fishe{
+    width: 100%;
+    height: 1000px;
 }
 
 header {
@@ -36,13 +49,16 @@ header {
     align-items: center;
     padding: 10px 5%;
     border-bottom: 2px solid;
-}
 
-.navbar{ 
+    /* this stuff pertains directly to navbar tho so idk if this is optimal */
     /* text-align: center; */
     font-family: Exo, sans-serif ;
     font-weight: 400;
     font-size: 20px;
+}
+
+.navbar{ 
+    
 } 
 
 .nav_links{

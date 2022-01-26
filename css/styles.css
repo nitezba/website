@@ -61,10 +61,10 @@ header {
     font-weight: 400;
     font-size: 20px;
 }
-
+/* 
 .navbar{ 
     
-} 
+}  */
 
 .nav_links{
     list-style: none;
@@ -73,10 +73,11 @@ header {
     display: inline-block;
     font-size: 20px;
 } 
-/* need this one and not the hover so that the link doesnt look all ugly by default */
+
+/* need this one and not the hover so that the link doesnt look all ugly by default
 .nav_links li a {
     
-} 
+}  */
 
 /* .nav_links li a:hover {
     transition: all 0.2s ease 0s;
@@ -85,7 +86,7 @@ header {
 
 
 
-/* BOOKS PAGE STYLE PART */
+/* BOOKS PAGE STYLE PART ================================================================ */
 .book img{
     width: 20%;
 }

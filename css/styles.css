@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Exo:wght@500&display=swap');
 /* <!-- some basic color theory to think about the website palette wouldn't hurt --> */
 
+/* what this do - look good tho */
+html {
+    font-size: calc(1em + 0.5vw);
+} 
+
 /* ID'S ARE USED TO IDENTIFY AND STYLE SINGLE ITEMS
    CLASSES ARE USED TO DO THIS BUT FOR MULTIPLE OBJECTS
    
@@ -79,9 +84,18 @@ header {
 } */
 
 
-/* what this do - look good tho */
-html {
-    font-size: calc(1em + 0.5vw);
-} 
 
 /* BOOKS PAGE STYLE PART */
+.book img{
+    width: 20%;
+}
+
+figure {
+    /* Displays an element as a block element (like <p>).*/
+    display: block;
+
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}

@@ -20,6 +20,10 @@ html {
     padding: .5em;
 }
 
+.center {
+    text-align: center;
+}
+
 .book-elt img {
     float: left;
     width: 200px;

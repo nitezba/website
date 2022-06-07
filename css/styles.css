@@ -3,9 +3,18 @@
 
 /* what this do - look good tho */
 html {
-    font-size: calc(1em + 0.5vw);
     background-color: lightblue;
 } 
+
+
+
+body {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 40px auto;
+    padding: 0 10px;
+    max-width: 650px;
+}
 
 .row {
     display: flex;

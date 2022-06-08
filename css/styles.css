@@ -6,7 +6,9 @@ html {
     background-color: lightblue;
 } 
 
-
+p {
+    text-align: justify;
+}
 
 body {
     font-size: 20px;
@@ -14,6 +16,13 @@ body {
     margin: 40px auto;
     padding: 0 10px;
     max-width: 650px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
 }
 
 .row {

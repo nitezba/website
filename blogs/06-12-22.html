@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark">
+    <head>
+        <!-- KaTeX -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                renderMathInElement(document.body, {
+                  // customised options
+                  // • auto-render specific keys, e.g.:
+                  delimiters: [
+                      {left: '$$', right: '$$', display: true},
+                      {left: '$', right: '$', display: false},
+                      {left: '\\(', right: '\\)', display: false},
+                      {left: '\\[', right: '\\]', display: true}
+                  ],
+                  // • rendering keys, e.g.:
+                  throwOnError : false
+                });
+            });
+        </script>
+
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <meta name="author" content="Sebastian Chavarro">
+        <!-- js -->
+        <script src="./js/index.js"></script>
+        <!-- https://stackoverflow.com/questions/13739568/how-do-i-link-a-javascript-file-to-a-html-file -->
+        <title>June 12th, 2022 - Weekly Summary #2</title>
+        <link rel="icon" href="./images/typing-round.png">
+        <link rel="stylesheet" href="../css/styles.css"> <!-- style sheet ! -->
+    </head>
+
+    <body>
+        <h2 class="center">June 12th, 2022 - Weekly Summary #2</h2>
+        
+        <div id="general">
+            <p>First obvious note is the say that I'm actually writing/finishing this on <em>Monday</em>, yeah bleh. But onto actual discussion. 
+            </p>
+        </div>
+        <div id="meta">
+            <h3 class="center">Meta</h3>
+            <p>
+                <b>Good summaries take time.</b> I started on the Dummit and Foote part of this <a href="../blogs/thoughts1.html"> on Wednesday</a> and three days of work
+                yielded what I have down there for it, which is barely even two sections. Working through it will be good practice for condensing my thoughts and communicating 
+                them, both of which are skills I want to develop. But if two sections of material I should already know took as long as they did I can't help 
+                but wonder if I need to rethink the chapter/week approach I chose to take with this book. On the other hand, the early content of Munkres isn't 
+                particularly advanced, the "read -> close book & summarize -> reread" approach kept it engaging and productive. On the other side of things, 
+                I didn't really hold myself to my other proposed metric of doing assigned homework problems. I'm having a hard time pinpointing why too; maybe it's a matter
+                of starting earlier, or posting solutions here (which I obviously haven't done this week ahhhhh). Frustration gets the better of me much faster
+                that I'd like it to. I can't even commit to getting it in this weekend because of a vacation.
+                <br>
+                <b>What can I improve upon this week?</b> Well again, that vacation is going to get in the way, but in general I think I need to stop worrying about speeding through 
+                material, whether I know it already or not. In doing so, I think I'm setting myself up for failure when I inevitably end up going slow on a problem or take a lot of time 
+                trying ot understand something. With that in mind, I'll spend this week trying to enjoy the material more than trying to condense it.
+
+                <br>
+                
+                With TIT I'm probably gonna try and focus on condensing and explaining big ideas rather than "$(ab)^{-1} = b^{-1}a^{-1}$ is a thing that is true in a group now learn it". 
+    
+                Also this log on chapter one of D&F was obscenely long and that definitely won't scale well - I think this one <em>needed</em> to be long since it's moreso me proving that I know the material as opposed to summarizing 
+                learning, but they absolutely have to be shorter in the future.
+            </p>
+        </div>
+            <h3 class="center">TIT</h3>
+            <div id="DnF">
+                <h4>Dummit and Foote - Chapter 1: Introduction to Groups</h4>
+            <ol style="font-size: 14px;">
+                <li>Basic Axioms and Examples</li>
+                <li>Dihedral Groups</li>
+                <li>Symmetric Groups</li>
+                <li>Matrix Groups</li>
+                <li>The Quaternion Group</li>
+                <li>Homomorphisms and Isomorphisms</li>
+                <li>Group Actions</li>
+            </ol>
+            <!-- historical motivation could be a nice start too groups-->
+            <!-- actually the history of group theory probably deserves its own blogpost - WEEKEND TASK -->
+            <p> Coming soon: <a href="">Motivational History of Group Theory</a>; alternatively, "wait this is a really random definition..."
+                <br>
+                A group is a set $G$ that abides by certain properties. This is what I see in my head when I need to think about a group:
+            </p>
+                <img src="../images/group.png" class="text-img">
+            <p>
+                Call it my version of a mnemonic. Early on, the first step to understanding a group is to actually <em>remember</em> its properties  
+                (I confess to having given this too much thought, the picture keeps it simple for me). In order for a set to be a group, we first need a <b>binary operator</b>
+                (also known as a law of composition) to act on its elements. Formally, this is a map $+:G \times G \to G$; and example is $+(a,b) = c$. 
+                This is just a rule that answers "what happens when we take element $a$ and mash is with element $b$?", or simply, $a+b = c$.
+                So, if this map/binary operator/law of composition/operation has four golden properties, we call it a <b>group</b>:
+                <ol>
+                    <li>Closure - the operation will always yield another element of the set</li>
+                    <li>Associativity - parenthesize at will!</li>
+                    <li>Identity - there is some element of $G$ such that operating on it with any other element will yield that other element</li>
+                    <li>Inverses - for every element of $G$, there is another (<em>not necessarily distinct</em>) element such that operating on the two yields that special identity element from before</li>
+                </ol>
+                Boom. You know what group is. You probably feel like it's a very arbitrary and maybe even random set of things to define, but the motivation
+                and importance comes with a bit of time.
+            </p>
+                <hr>
+            <p>
+                A motivating example of a group is <b>the dihedral group</b>. The general definition is that it is the group of symmetries of a regular n-gon. Too un-jargon this, let's think about a pentagon.
+                First though, let's think a little more formally about symmetry. Normally we probably think about symmetry in the context of "this shape is symmetric because if I move it around
+                in $x$ or $y$ way, I can still get a shape that looks the same." To add some rigor, note that in order for a translation of the shape to be valid, adjacent vertices must stay adjacent.
+                This is inherently tied to the idea of a line of symmetry.
+                
+            </p>
+            <div>
+                <img src="../images/pentagon.png" style="max-width: 50%; float: left; padding-inline: 13px;" class="text-img">
+                <p> Here if we <em>rotate</em> the pentagon such that all vertices fall on the location of previous vertices, we essentially have the same shape (this is a rotation by $\frac{360}{5} = 72$ degrees).
+                    If we do this three more times, we get all the distinct variations of the pentagon that preserve adjacent pairs before landing on where we started (remember this). This isn't enough though! 
+                    If the image here can be written as $ABCDE$, then what about $AEDCB$? It preserves pairs like before, but isn't obtained through any rotation; hence we consider <em>reflections</em> as well. Now we can start to see a 
+                    bit of the group structure that emerges naturally. Remember how rotating a certain number of times (5 in this case) puts the shape back at where it started - the same is true of reflecting 
+                    it across the same axis twice. Look back at the group axioms from earlier and see if you can identify how this might be of importance to us.
+
+                    <br>
+                    <br>
+                    ...
+                    <br>
+                </p>
+                <p> What you probably should've thought first was "wait don't we need some kind of operation first before we can think about a group" and you're right! But we already kinda have it; the only thing missing
+                    is to observe that <em>composing</em> rotations and reflections is this operation. Note that it's not the act of applying the symmetries onto the polygon, but rather doing one after the other 
+                    that gives us an operation - which you should decide for yourself is closed. To make that last bit easier, we can start to abstract away a bit: call the rotation of the pentagon $\rho$ and the reflection 
+                    $\tau$. These can now be treated as <em>elements of a set</em> rather than translations of a shape. And they're special ones at that since they're going to <em>generate</em> the rest of our set.
+                    (Sidenote: this guarantees closure). We said before 
+                </p>
+            </div>
+        </div>
+        <div id="Munkres">
+            <h4>Munkres</h4>
+            <p> A tiny bit scuffed because <em>Monday asjshflakhsbfhasbf</em> but better than nothing
+                <ul>
+                    <li>Relations are sets. Given a set $X$ and a relation $R$ on $X$, for a given $x \in X$, $R \subseteq X \times X$ is the set of all elements of
+                        $X \times X$ such that $xRy$ (i.e. $x$ is in the $R$ relation to $y$).
+                    </li>
+                    <li>Given a relation, if it has three special properties (reflexivity, symmetry, and the transitive property) we call it an equivalence relation.
+                        This is usually given by ~ instead of $R$ though it can be read the same.
+                    </li>
+                    <li>Similarly, if it has anti-reflexivity, the transitive property, and either $xRy$ or $yRx$ we call it an order relation (typically given by $<$).</li>
+                    <li>Two important indexing sets are $\{1, \dots, m\}$ and $\mathbb{Z}^+$. The idea of indexing sets (along with m-tuples) helps define a more general notion
+                        of the cartesian product, though I'm not entirely sure how this works just yet. 
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div id="Exercise">
+            <h3 class="center">Exercise</h3>
+            <p>A quickie here but I'm playing tennis more consistently and when I'm obliged to play slower tennis I'm forcing myself to learn 
+                to come to the net for once in my life. <em>I think</em> a pattern that works is to, at some point in the rally 1) find the chance for 
+                a down the line groundstroke (preferably wrong-footing them) 2) if the ball is even mildly short, rush in with a cross court approach and 3) 
+                get there <b>in ready position</b> to finish. My problem is that I stop being mindful/intense about midway through this and 
+                by the time I get to the net I'm not ready for the volley. I've only realized this as I've tried to force myself into this lately, 
+                but down the line approach shots are probably not the move because it leaves the easier cross-court angle open for passing shots. By
+                approaching with a cross court shot, you force the opponent to try and pass you down the line, which is obviously harder.
+            </p>
+        </div>
+    </body>
+</html>

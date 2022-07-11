@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark">
+    <head>
+        <!-- KaTeX -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                renderMathInElement(document.body, {
+                  // customised options
+                  // • auto-render specific keys, e.g.:
+                  delimiters: [
+                      {left: '$$', right: '$$', display: true},
+                      {left: '$', right: '$', display: false},
+                      {left: '\\(', right: '\\)', display: false},
+                      {left: '\\[', right: '\\]', display: true}
+                  ],
+                  // • rendering keys, e.g.:
+                  throwOnError : false
+                });
+            });
+        </script>
+
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <meta name="author" content="Sebastian Chavarro">
+        <!-- js -->
+        <script src="./js/index.js"></script>
+        <!-- https://stackoverflow.com/questions/13739568/how-do-i-link-a-javascript-file-to-a-html-file -->
+        <title>July 10th, 2022 - Weekly Summary #6</title>
+        <link rel="icon" href="./images/typing-round.png">
+        <link rel="stylesheet" href="../css/styles.css"> <!-- style sheet ! -->
+    </head>
+
+    <body>
+        <h2 class="center">July 10th, 2022 - Weekly Summary #6</h2>
+            <div id = "meta">
+
+                <h2 class = "center">Meta</h2>
+                <p>The question outline works!!! Weka!!! (I'm proposing Weka as a substitute for eureka). I felt significantly more organized and directed when studying,
+                    and when I felt like I was wasting time I could go back and see what I had deemed important and if I should move on or not. The main problem this past week 
+                    and with the approach of question outlines was that 1) I misjudged the time I would take on certain sections/questions but also 2) I satisfied myself with small amounts
+                    of work very quickly. I think I'm very used to the 25/5 pomodoro strategy for two hours that I already switch to break mode, but I can most definitely push for 3 hours. 
+                    The other problem with this approach is the lack of conventional problems but I'm not sure how to solve that one just yet. All in all a solid week :) Also because 
+                    the dumb flappy bird clone I've been making has been coming along slowly but surely. I got nice physics working for the jump and a column of pipes to slide across the screen. 
+                    Code organization could definitely be better but that will come with practice and consistency. I'm getting to a point where I'm spending too much time on it though so I need to finish 
+                    soon and move on to the next one. Hey maybe I'll have a full section for this next time. GMTK game jam next weekend looking realllll thicc...
+                </p>
+                <img src="../images/weka.jpeg" class = "text-img">
+                <p class="center">Wekas shit the equivalent of their body weight in a day.</p>
+            </div>
+        <div id="summary">
+            <h2 class="center">Munkres</h2>
+            Section 12 - Topological Spaces
+            <ol>
+                <li>What is a topology?</li>
+                <li>How can we compare two topologies? When are topologies incomparable?</li>
+            </ol>
+            Section 13 - Basis for a Topology
+            <ol>
+                <li>What is a basis for a topology?</li>
+                <li>How can we arrive at a topology from a basis? Vice versa?</li>
+                <li>What does comparing topologies tell us about their bases?</li>
+                <li>What is a subbasis of a topology?</li>
+                <li>How does a subbasis generate a topology?</li>
+            </ol>
+            Section 14 - The Order topology (+some review)
+            <ol>
+                <li>What is a relation? In particular what is the order relation?</li>
+                <li>Describe the order topology.</li>
+                <li>What are rays?</li>
+                <li>How does a topological space X having a smallest or largest element affect the definition of this topology?</li>
+                <li>On what kinds of sets is it useful to create and order topology?</li>
+            </ol>
+            Section 15 - The Product topology
+            <ol>
+                <li>Are there any conditions for this topology to exist on sets X and Y?</li>
+                <li>Describe the product topology.</li>
+                <li>Describe the subbasis of the topology T in terms of projections.</li>
+            </ol>
+            <hr>
+            <p>Given a set $X$, a topology is a collection $T$ of subsets of $X$ with two main properties: 1) the empty set is contained in the collection and 2) it is closed under arbitrary 
+                unions and finite intersections. Such a set $X$ could then be referred to as a topological space. The terminology for comparing two topologies is that one is <em>coarser</em> or 
+                <em>finer</em> than the other. I'm just going to remember it by "$T_1$ is finer than $T_2$" $\iff$ "$T_1$ contains $T_2$". Munkres gave a good analogy of a truckload of rocks - if you 
+                were to pulverize some of them to make them more granular, you'd be making a <em>finer</em> collection of rocks (therefore obviously having more rocks than what you started with) but in terms
+                of sets, it would be a superset of what you started with. Also we call elements of a topology open sets.
+            </p>
+            <p>
+                A basis for a topology is a collection of <b>open</b> subsets that contain the entire topological space as a union of its elements and such that every element of the topology is a union of elements of this collection.
+                This needs some unpacking but first, the formal definition (from memory so maybe a bit lackin): A basis $B$ of a topological space $X$ is a collection of sets such that 
+                <ol>
+                    <li>For all $x \in X$, $x \in B'$, where $B'$ is an element of the collection $B$.</li>
+                    <li>If $x \in B' \cap B''$, then $x \in C \subseteq B' \cap B''$.</li>
+                </ol>
+            </p>
+            <p>
+                That second property took me a little bit to unpack but it essentially amounts to what I said before - every element of the topology generated by this collection can be expressed as an arbitrary union 
+                of basis elements. <b>How?</b> Well in english it's stating that if an element of the topological space exists at the intersection of two basis elements, then it must also be contained in a basis element that is 
+                a subset of that intersection. <b>Okay cool but how does that guarantee us a topology?</b> Okay consider a set $\{a,b,c,d,e\}$ and take a collection $\{\{a,b,c\}, \{c,d,e\}\}$. We can clearly see that every element of the set
+                is contained in some element of the collection. At this point I'll acknowledge that I've been omitting (and what  wasn't realizing when I was thinking about this) that this is really a discussion about <em>how the basis <b>generates</b> a topology.</em> 
+                The point of a basis is to fully determine a topology - usually fully expressing every element of a topology is too much work so it helps to be able to express every element as something else - in this case 
+                arbitrary unions of basis elements. This is similar to linear combinations of basis vectors in linear algebra. So what happens if we try to generate a topology (take arbitrary unions) with that collection 
+                (notice that the intersection isn't part of the collection)? Well we just don't get a topology! Arbitrary unions of that collection give us $\{\emptyset, \{a,b,c\}, \{c,d,e\}, \{a,b,c,d,e\}\}$, but this is not closed under finite intersections!!
+            </p>
+            <p>
+               Okay that might not have been the best explanation... but in essence the way that property is stated makes it easier to check, but it's easier to remember that elements of a topology can be expressed as unions of basis elements. Okay that's the talk about 
+               why that second condition is necessary and not having it breaks things. But given a "valid" basis, are we sure it actually generates a topology? The formal statement about how a topology is generated from a basis is as follows:
+            </p>
+               <div class = "center">A subset $U$ of a topological space $X$ is open if for all $x \in X$, there exists a basis element $B' \in B$ such that $x \in B' \subseteq U$.</div>
+               <p>   
+                   (Had to copy that one but I promise I understand it). Ok so - that second condition before is also indirectly stating that the intersection of two basis elements can be expressed as the union of basis elements. Then we can 
+                   see that the topology generated like this is actually already accounting for finite intersections as arbitrary unions, so we only have to worry about arbitrary unions when talking about a topology in terms of its basis. The 
+                   point is that saying "$\forall x \in X, x \in B \subseteq U$" is the same as saying arbitrary unions.
+                <b>Also note that every topology has a basis but it doesn't have to be unique. However, a basis will only generate one topology.</b>
+                </p> 
+            <p>Okay that was a lot so let's speed through some stuff. A subbasis is a "weaker" basis. It's a collection of subsets of a topological space that generates a topology by taking arbitrary unions of finite intersections of its elements.
+                A relation on a set $A$ is a subset of $A \times A$ with a certain rule; the order relation has three , which are (poorly expressed) that an element cannot relate to itself, every pair of elements has some relation, and transitivity. Given a set 
+                with a simple ordering relation on it, the collection of all open intervals, and all half open intervals with the min or max as a bound (should it exist) forms a topology.
+            </p>
+            <p>Didn't get through all that I wanted to but this was still a lot :) will patch up and push forward in next weekend's log.</p>
+        </div>
+        <div id="meta">
+            <h2 class="center">Exercise</h2>
+            <p>Besides 4th of July, I got my ass up every day this weekend and worked out every morning. I haven't even pushed that hard but it's crazy how even the bare minimum of consistency with 
+                exercise just makes me feel so much better in general. I feel better about my day and just more motivated to pursue things. I'm gonna keep it up this weekend and also go to the all for some 
+                tennis as well. The little bit of tennis I've played lately has told me loud and clear that my legs are SLACKIN and I wanna do something about it. If I can wake up earlier I can bike to the wall in the morning.
+                There, boom, that's the goal for this week, to do that at least one day. 
+            </p>
+        </div>
+        <p>Unrelated - did you know that Malenia is the Blade of Miquella?</p>
+        <img src="../images/malenia.jpeg" class ="text-img">
+    </body>
+</html>

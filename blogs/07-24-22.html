@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark">
+    <head>
+        <!-- KaTeX -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                renderMathInElement(document.body, {
+                  // customised options
+                  // • auto-render specific keys, e.g.:
+                  delimiters: [
+                      {left: '$$', right: '$$', display: true},
+                      {left: '$', right: '$', display: false},
+                      {left: '\\(', right: '\\)', display: false},
+                      {left: '\\[', right: '\\]', display: true}
+                  ],
+                  // • rendering keys, e.g.:
+                  throwOnError : false
+                });
+            });
+        </script>
+
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <meta name="author" content="Sebastian Chavarro">
+        <!-- js -->
+        <script src="./js/index.js"></script>
+        <!-- https://stackoverflow.com/questions/13739568/how-do-i-link-a-javascript-file-to-a-html-file -->
+        <title>July 24th, 2022 - Weekly Summary #8</title>
+        <link rel="icon" href="./images/typing-round.png">
+        <link rel="stylesheet" href="../css/styles.css"> <!-- style sheet ! -->
+    </head>
+
+    <body>
+        <h2 class="center">July 24th, 2022 - Weekly Summary #8</h2>
+        
+        <div id="meta">
+            <h3 class="center">General</h3>
+            <p>I'll spitball a bit. I tried another jam this week but didn't really give it the intense attention it deserves. Didn't wake up at least one 
+                day for the early hit. Hell I didn't even work out for 3 of the 7 days. I did get the chance to play some solid tennis at a club I once called home 
+                and that nostalgia definitely made my week. A decent chunk of me still feels like summer of 2019 was peak - my tennis was at it's best, I had nothing 
+                academic or life-altering to worry about and socially I was just very happy. Let's not get carried away though. This week I really felt the need for a 
+                fixed, well-defined schedule and it's a combination of reasons.
+                <ul>
+                    <li>I spend a lot of time on things that I could definitely get done in a shorter amount of time if I had a plan. A prime example is organizing code.
+                        That shit shouldn't take a full work session, and yet it happens.
+                    </li>
+                    <li>Similarly, I sit down to do something (like plan out my week) and get distracted with a million and one possible things. Ideally having a preplanned 
+                        time slot as well as a box to check off would discourage procrastination.
+                    </li>
+                    <li>Ambivalence about what to do with a study session; would definitely save time to have some decisions made ahead of time.</li>
+                    <li>A lax attitude towards starting late - there are days when I waste time in the morning for literally no reason, and a mild sense of urgency to 
+                        get the day started would go a long way to eliminating that. If it was actually chill time I'd be fine with it but it's not even that it's just no thoughts 
+                        head empty time.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Also about that "planning more math" stuff. Again with the need for a schedule, but yeah I never actually sat down and gave it enough time.
+                This might not be the best week to start anyways since half of it is deleted anyways (DC trip!) but at a bare glance, a survey of Algebraic Topology 
+                seems like a good first choice. All I really gotta do then is pick out big ideas and make a loose outline of when I wanna do them and how.
+            </p>
+        </div>
+        <div id="meta">
+            <h3 class="center">Munkres</h3>
+            <b>Section 17 - Closure and Limit Points</b>
+            <ol>
+                <li>What is a closed set? How does it relate to a topological space?</li>
+                <li>What can we say about closed sets in relation to subspaces?</li>
+                <li>What is the interior/closure of a topological space? of a subspace?</li>
+                <li><b>Why should I care about the closure of a set?</b></li>
+                <li>What's a more convenient way to talk about the closure of a set?</li>
+                <li>How are those definitions of a closed set equivalent?</li>
+                <li>What is a Hausdorff space? State the formal definition as well as its important consequence.</li>
+                <li>What is the T_1 axiom and how is the Hausdorff condition stronger?</li>
+            </ol>
+            <b>Section 18 - Continuous Functions</b>
+            <ol>
+                <li>Define a continuous function - what is important to remember here?</li>
+                <li>How/why do bases affect continuity?</li>
+                <li>How is the aforementioned definition of continuity equivalent to the epsilon-delta definition from calc? <-</li>
+                <li>List three ways of stating that a function is continuous and explain how they are equivalent. <- </li>
+                <li>Can a function be continuous if it's inverse isn't? Vice versa?</li>
+                <li>Define a homeomorphism in two ways and describe how they're equivalent.</li>
+                <li>What are topological properties? Topological structure?</li>
+                <li><b>How is a continuous function created?</b></li>
+            </ol>
+            <p>Okay. A closed set is the complement of an open set. Simple as that. Take $(0,1) \subseteq \mathbb{R}$, it's complement is $(-\infty, 0] \cup [1, \infty)$.
+                That is a closed set. These things can be used to define a topology on a set just like we did with open sets actually, though in my head it feels a bit weird cuz 
+                you need a topology to already exist to have the idea of a closed set (with this definition at least). So, given a topological space, arbitrary intersections of closed
+                sets are closed, as well as finite unions. I think interior/closure is usually talked about for <em>subspaces</em> so I'll answer for that - the interior of a subspace 
+                is the union of open sets <em>contained within</em> the subspace. Closure is the intersection of all closed sets <em>containing</em> the subspace. Closure is more talked 
+                about and important than interior but I don't have a full picture of why just yet. <b>I need to keep an eye out for the answer to this as I keep reading.</b>
+            </p>
+            <p>Ok but all this talk of complements of open sets is a bit annoying - we can also define the closure of a set as the union of the set with all its <b>limit points.</b>
+               Intuitively, the limit point of a set is one that is either in the set, or infinitely close to it. IIRC the formal definition is that it's a point such that every open set around it
+               (i.e. every <b>neighborhood</b> around the point) intersects the set. That's why 0 is a limit point of (0,1).
+            </p>
+            <p>A <b>Hausdorff space</b> is a topological space where every pair of points is contained in some disjoint neighborhood. The consequence of this is that <b>point sets
+                become closed.</b> It is apparently wacky and unfun to try and make classifications of topological spaces that don't have this property, so we might work within its constraint 
+                later on. How does that condition accomplish that though? A weaker version of this is the $T_1$ axiom, which actually just states that consequence of the Hausdorff condition - that point sets are closed. This is weaker than the 
+                Hausdorff condition though and I still need to really understand why.
+            </p>
+            <p>Speaking of things I still need to sit down and truly understand - <b>how is the epsilon-delta definition of continuity I know and love from analysis the same as the general definition?</b>
+                That definition being: a continuous function $f: X \to Y$ is one where the preimage of open sets in $Y$ are open in $X$. Intuitively I think this can just be thought of as "open sets map
+                to open sets" but formally, that condition is actually not equivalent (and probably weaker) than stating it with the preimage. Example I remember is mapping all of R to 0 - it's clearly continuous 
+                but every open set in R maps to a point set, which is not open. This also makes it clear that continuity really depends on the topologies of the domain and codomain. 
+            </p>
+            <p>Ok this is where I left off - three equivalent definitions of continuity. The first one is that the image of each closure of all subset is a subset of the closure of the image ($f(\overline{A}) \subseteq \overline{f(A)})$.
+                I can actually see the equivalence with the original definition here - and I can't remember it... at least I know I need to review :/ Another definition is that the preimage of closed sets are closed, but that's about where 
+                I left off. I also read the homeomorphisms are the same idea as isomorphisms from algebra so we're getting to the "classifying" part of things.
+
+                Good week ahead, albeit somewhat short.
+            </p>
+            <h3 class="center">:)</h3>
+            <img src="../images/blade.jpeg" class="text-img">
+        </body>
+        </div>
+    </html>

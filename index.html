@@ -16,12 +16,6 @@ TODO:
     - find a way to remove the ugly .html from the link in google 
 -->
 
-<!-- new TODO
-
-    actually figure out what are smart things to put in the head tag
-    fix darkreader in meta tags
--->
-
 <html>
     <!-- https://htmlhead.dev/#recommended-minimum -->
     <head>
@@ -39,32 +33,38 @@ TODO:
     <body>
         <header>
             <nav>
-                <ul id="navbar">
-                    <li class="nav-elt"><a href="blogs-home.html">Weekly Updates</a></li>
-                    <li class="nav-elt"><a href="index.html">Sebastian Chavarro Valderrama</a></li>
-                    <li class="nav-elt"><a href="posts.html">Posts</a></li>
-                </ul>
+                <!-- posts -->
+                <div class="nav-elt" >
+                    <a href="posts.html">Posts</a>
+                </div>
+                <!-- home page -->
+                <div class="nav-elt" >
+                    <a href="index.html">Sebastian Chavarro Valderrama</a>
+                </div>
+                <!-- weekly updates -->
+                <div class="nav-elt" >
+                    <a class="nav-elt" href="weekly-updates.html">Weekly Updates</a>
+                </div>
             </nav>
         </header>
+        <hr>
         <main>
             <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a, molestias numquam deserunt commodi nemo iusto quos. Beatae repudiandae nihil dolore corporis earum, doloribus placeat ipsum eveniet. Harum, dolorem laudantium?
             </p> -->
-        </main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsam minus dolorem esse quo itaque amet iste rem adipisci nulla voluptas, nihil fuga illum molestiae cum, aspernatur voluptate provident inventore.</p>
-
-        <!-- <h1 class="center">Sebastian Chavarro Valderrama</h1>
-        <p>I'm currently an undergrad at Lehigh University. My academic interests are mathematics and computer science, 
+            <h2>Hey!</h2>
+            <p>
+            I'm currently an undergrad at Lehigh University. My academic interests are mathematics and computer science, 
             with a long term goal of attending grad school (likely to keep studying math). At the moment, I'm focused on 
             learning how to learn independently, with the hope that I can 1) transfer those skills to all parts of my life and 
             2) get a better idea of what kind of math I'd like to specialize in. Along this journey, I like to <a href="books.html">read</a>, I 
-            (try to) <a href="tennis.html">keep up a high level of tennis</a>, and I maintain a strong belief in the power of journaling, 
+            (try to) keep up a high level of tennis, and I maintain a strong belief in the power of journaling, 
             which I apply through <a href="blogs-home.html">this blog.</a>
 
             <br>
             <br>
 
             Also talk to me about <a href="https://open.spotify.com/user/sass_chan" target="_blank">music</a> whenever, I have many opinions.
-        </p> -->
-    
+            </p>
+        </main>    
     </body>
 </html>
